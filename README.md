@@ -1,27 +1,24 @@
-GovConnect-AI-Powered Civic Issue Reporting Platform
+**GovConnect-AI-Powered Civic Issue Reporting Platform**
 
-Project Overview::
+**Project Overview::**
 
 GovConnect is a web-based platform that enables citizens to report civic issues such as potholes, garbage dumps, and damaged streetlights. The system leverages AI (YOLOv8) to automatically detect issue types from uploaded images, reducing the effort required from users and ensuring faster reporting.
 
 Admins can view all reports in a dashboard, track statuses, and manage civic problem resolutions effectively.
 
-Tech Stack::
-
-Frontend:
+**Tech Stack::**
+_**Frontend:**_
 React (Vite)
 Axios (API requests)
-
-Backend:
+_**Backend:**_
 FastAPI (Python)
 YOLOv8 (Ultralytics) for image detection
 Pydantic (validation)
-
-Database:
+_**Database:**_
 MongoDB
 
 
-Features::
+**Features::**
 Manual Reporting: Users can submit issue title, description, location, and image.
 AI-Powered Reporting: Users upload an image, system auto-detects issue type (pothole, garbage, etc.), user only provides location.
 Admin Dashboard: View reports, track statuses, and monitor issue resolution.
@@ -41,10 +38,44 @@ Fetch all reports (latest first).
 PUT /update-status/{id}
 Update report status (Pending → In Progress → Resolved).
 
-How to Run Locally::
+**_Folder structure:-_**
+Govconnect/
+|--backend/
+    |--main.py
+|--ml_training/
+    |--Garbage Detection.v1i.darknet
+    |--pathole-detection.v2i.darknet
+    |--StreetLight.v2i.darknet
+    |--water leakage.v1i.darknet
+|--smartcivic/
+    |--src/
+       |--components/
+          |--IssueCard.jsx
+          |--Navbar.jsx
+          |--ReportForm.jsx
+          |--ReportForm.css
+       |pages/
+          |--AdminDashboard.jsx
+          |--home.jsx
+|--merge.py
+|--yaml.py
+
+**Datasets:**
+Get the datasets from :https://drive.google.com/drive/u/0/folders/1ovZzXmk-tsTY4V2xSVy4rT1HLufOe5_u
+
+Use merge.py file to combine all the images and labels from the datasets
+use yaml.py file to create data.yaml file 
+
+for training use :: yolo detect train data=data.yaml model=yolov8n.yaml epochs=100 imgsz=640
+
+
+**How to Run Locally::**
 cd backend
 uvicorn main:app --reload
 
 cd smartcivic
 npm install
 npm run dev
+
+
+
