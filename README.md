@@ -38,27 +38,7 @@ Fetch all reports (latest first).
 PUT /update-status/{id}
 Update report status (Pending → In Progress → Resolved).
 
-**_Folder structure:-_**
-Govconnect/
-|--backend/
-    |--main.py
-|--ml_training/
-    |--Garbage Detection.v1i.darknet
-    |--pathole-detection.v2i.darknet
-    |--StreetLight.v2i.darknet
-    |--water leakage.v1i.darknet
-|--smartcivic/
-    |--src/
-       |--components/
-          |--IssueCard.jsx
-          |--Navbar.jsx
-          |--ReportForm.jsx
-          |--ReportForm.css
-       |pages/
-          |--AdminDashboard.jsx
-          |--home.jsx
-|--merge.py
-|--yaml.py
+<img width="437" height="636" alt="image" src="https://github.com/user-attachments/assets/ebf8dc1c-64b3-4c0a-90ec-f85491c5e4f5" />
 
 **Datasets:**
 Get the datasets from :https://drive.google.com/drive/u/0/folders/1ovZzXmk-tsTY4V2xSVy4rT1HLufOe5_u
@@ -76,6 +56,8 @@ uvicorn main:app --reload
 cd smartcivic
 npm install
 npm run dev
+
+
 
 
 
