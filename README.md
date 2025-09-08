@@ -43,8 +43,8 @@ Update report status (Pending → In Progress → Resolved).
 **Datasets:**
 Get the datasets from :https://drive.google.com/drive/u/0/folders/1ovZzXmk-tsTY4V2xSVy4rT1HLufOe5_u
 
-Use merge.py file to combine all the images and labels from the datasets
-use yaml.py file to create data.yaml file 
+Use merge.py file to combine all the images and labels from the datasets.
+use yaml.py file to create data.yaml file.
 
 for training use :: yolo detect train data=data.yaml model=yolov8n.yaml epochs=100 imgsz=640
 
@@ -56,6 +56,7 @@ uvicorn main:app --reload
 cd smartcivic
 npm install
 npm run dev
+
 
 
 
