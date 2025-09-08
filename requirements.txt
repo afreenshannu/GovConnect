@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pymongo
+pydantic
+ultralytics
+pillow
+python-multipart
