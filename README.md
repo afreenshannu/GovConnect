@@ -57,6 +57,43 @@ cd smartcivic
 npm install
 npm run dev
 
+Enhancements which are going to be don further on this are:
+ Add user authentication (JWT login/signup).
+
+ Add issue tracking system for citizens → check report status.
+
+ Add analytics dashboard for admins (charts of issues by type, location, resolution time).
+
+ Update ReportForm to:
+
+Upload an image.
+
+Send to FastAPI.
+
+Display detected issue + location automatically.
+
+ Add IssueCard component improvements:
+
+Show issue type, confidence score, and location map preview.
+
+ AdminDashboard:
+
+Display reported issues in real-time.
+
+Add filters → issue type, location, priority.
+
+Add status update (Pending → In Progress → Resolved).
+
+Expand from static uploads to continuous monitoring like:.
+
+CCTV Feeds
+
+Take live RTSP stream or video file as input.
+
+Run YOLOv8 detection in real-time.
+
+On detection, auto-create a report in DB (issue type + timestamp + camera location).
+
 
 
 
